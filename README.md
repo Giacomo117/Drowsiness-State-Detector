@@ -89,11 +89,11 @@ The visualization uses a multi-threaded design:
 ```mermaid
 flowchart LR
   A[Webcam] --> B[Capture Thread]
-  B --> C{Largest Face Detection\nHaar Cascade}
-  C --> D[Yawn Detection\nKeras MobileNet]
-  C --> E[Eye State\nKeras classifier]
-  C --> F[Facial Keypoints\nPyTorch ResNet50]
-  D --> G[Log Buffer\n(15s deque)]
+  B --> C{Largest Face Detection<br/>Haar Cascade}
+  C --> D[Yawn Detection<br/>Keras MobileNet]
+  C --> E[Eye State<br/>Keras classifier]
+  C --> F[Facial Keypoints<br/>PyTorch ResNet50]
+  D --> G[Log Buffer<br/>15s deque]
   E --> G
   F --> G
   G --> H[Metrics Thread]
